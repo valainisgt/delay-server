@@ -1,1 +1,2 @@
 # delay-server
+A web application that accepts requests and will delay returning a response based on the given amount of time. The only endpoint here is `/home`, which accepts two query parameters: `delay` and `nonce`. The response payload is a representation of what the user sent. For example, If I were to stand this web application up at `http://localhost`, the following request `http://localhost/home?delay=5000&nonce=hello%20world` would be accepted by the server, wait five seconds, and then return `{"nonce":"hello world","delay":5000}`.
